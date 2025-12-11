@@ -7,18 +7,16 @@
     $username = $_POST['admin'];
     $password = $_POST['admin123'];
 
-    // Query to check user
     $sql = "SELECT * FROM users WHERE username='$username' LIMIT 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
 
-        // Check password (assuming plain text for now, better to hash!)
         if ($password == $user['password']) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            header("Location: orders.php"); // redirect to your page
+            header("Location: orders.php"); 
             exit;
         } else {
             $error = "Incorrect password";
