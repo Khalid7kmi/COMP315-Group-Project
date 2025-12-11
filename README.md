@@ -18,7 +18,7 @@
 </table>
 
 <h1>ER digram for the database</h1>
-<img src="ER.png" alt="Trulli" width="500" height="333">
+<img src="ER.png" alt=" " width="500" height="333">
 
 
 <h1>📌 Requirements & Proofs</h1>
@@ -36,7 +36,7 @@ Below are all required project criteria with that was mentioned in the Mini Proj
 
 <h3>Proof (Screenshot + Code)</h3>
 
-<p><em>📸 Insert screenshot of menu or orders page showing database results.</em></p>
+<img src="ER.png" alt=" " width="500" height="333">
 
 <pre>
 <code>
@@ -95,7 +95,7 @@ mysqli_query($conn, $delete);
 
 <h3>Proof</h3>
 
-<p><em>📸 Insert GIF or screenshot of login -> dashboard -> logout.</em></p>
+<img src="login demo.gif" alt=" " width="500" height="333">
 
 <pre>
 <code>
