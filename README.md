@@ -3,8 +3,25 @@
 
 <h2>Students</h2>
 <table>
-  <th><td>Name</td><td>ID</td></th>
-  <tr><td>Khalid Hakami</td><td>202412133</td></tr>
+  <tr>
+    <th>Name</th>
+    <th>ID</th>
+    <th>TBD</th>
+  </tr>
+  <tr>
+    <td>Khalid Hakami</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+
+  </tr>
+  <tr>
+    <td>202412133</td>
+    <td>TBD</td>
+    <td>TBD</td>
+    <td>TBD</td>
+
+  </tr>
 </table>
 
 
@@ -14,7 +31,7 @@
 <h1>📌 Requirements & Proofs</h1>
 
 <p>
-Below are all required project criteria with dedicated sections for screenshots, code samples, and GIF demonstrations.
+Below are all required project criteria with that was mentioned in the Mini Project Grading Rubric file.
 
 </p>
 
