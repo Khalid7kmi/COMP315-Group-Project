@@ -2,30 +2,23 @@
 <h1>A simple food Service System</h1>
 
 <h2>Students</h2>
-<table>
+<table border="1">
   <tr>
     <th>Name</th>
     <th>ID</th>
-    <th>TBD</th>
   </tr>
   <tr>
     <td>Khalid Hakami</td>
-    <td>TBD</td>
-    <td>TBD</td>
-    <td>TBD</td>
-
+    <td>202412133</td>
   </tr>
   <tr>
-    <td>202412133</td>
     <td>TBD</td>
     <td>TBD</td>
-    <td>TBD</td>
-
   </tr>
 </table>
 
-
-
+<h1>ER digram for the database</h1>
+<img src="ER.png" alt="Trulli" width="500" height="333">
 
 
 <h1>📌 Requirements & Proofs</h1>
