@@ -155,10 +155,10 @@ Below are all required project criteria with that was mentioned in the Mini Proj
 > **Note:** Please replace the placeholder text *(📸 Insert screenshot...)* with your actual screenshots in the GitHub editor before submitting!
 
 ---
-<h1>🍽️ Food Ordering System – Project Requirements</h1>
+# Food Ordering System - Project Requirements
 
-<p><strong>Note:</strong> Replace the placeholder text <em>(📸 Insert screenshot…)</em> with your actual screenshots in GitHub.</p>
-<hr>
+> **Note:**TBD
+
 
 <h2>✅ 1. SELECT Query (Fetching Data)</h2>
 <p><strong>Requirement:</strong> Fetch data from MySQL.</p>
