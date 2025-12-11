@@ -3,7 +3,6 @@ session_start();
 include 'config.php';
 include 'header.php';
 
-// Check if user is logged in
 if (!isset($_SESSION['username']) || !isset($_SESSION['id'])) {
     header("Location: login.php");
     exit;
