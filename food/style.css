@@ -1,0 +1,37 @@
+btn-primary mt-3 {
+  background-color: #BE6741; 
+  border-color: #BE6741;
+  color: white;
+}
+.body {
+    font-family:'segoe UI',Tahoma;
+    background-color:#f8f9fa;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom:15px;
+    text-align:center
+}
+.hero-content p {
+    font-size: 1.5rem;
+    text-align:center
+    margin-bottom:25px;
+}
+.hero .btn{
+    background-color: #ffc107;
+    color: #000;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.hero .btn:hover{
+    background-color: #e0a800;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover; 
