@@ -4,7 +4,7 @@
 <h2>Students</h2>
 <table>
   <th><td>Name</td><td>ID</td></th>
-  <tr><td>Khalid Hakami</td><tr>202412133</tr></tr>
+  <tr><td>Khalid Hakami</td><td>202412133</td></tr>
 </table>
 
 
@@ -15,7 +15,7 @@
 
 <p>
 Below are all required project criteria with dedicated sections for screenshots, code samples, and GIF demonstrations.
-You can fill the empty sections during your documentation phase.
+
 </p>
 
 <hr>
