@@ -20,7 +20,114 @@
 <h1>ER digram for the database</h1>
 <img src="ER.png" alt=" " width="500" height="333">
 
+# Food Ordering System - File Documentation
 
+This document explains the purpose and functionality of each file in the project.
+
+## 📂 Core Configuration
+
+* **`config.php`**
+    Establishes the connection to the database using credentials (host, username, password, db name). It is included in almost every other file to enable data access.
+
+## 📱 User Interface & Customer Experience
+
+This section details the files responsible for the front-end customer experience, including authentication, browsing food, and managing orders.
+
+### 🔐 Authentication & Session Management
+
+* **`register.php`**
+    * **Purpose:** Handles new user sign-ups.
+    * **Functionality:**
+        * Validates that the username (3-20 chars) and password (6-20 chars) contain no spaces.
+        * Uses `password_hash()` to securely encrypt passwords before storing them in the `users` table.
+        * Redirects to `login.php` upon success.
+
+* **`login.php`**
+    * **Purpose:** Authenticates existing users.
+    * **Functionality:**
+        * Contains a hardcoded check for the admin account (User: `admin`, Pass: `admin123`) to redirect to the admin panel.
+        * Verifies customer credentials against the database using `password_verify()`.
+        * Starts a session (`$_SESSION["loggedin"]`) to track the user across pages.
+
+* **`logout.php`**
+    * **Purpose:** Ends the user session.
+    * **Functionality:** Runs `session_destroy()` and redirects the user immediately back to the login page.
+
+### 🏠 Browsing & Ordering
+
+* **`index.php` (Home Page)**
+    * **Purpose:** The landing page for logged-in users.
+    * **Functionality:**
+        * Displays a welcome alert with the username.
+        * Features a "Hero" section with a call-to-action button.
+        * **Featured Dishes:** dynamically fetches and displays the first **3 items** from the `foods` database table to highlight popular items.
+
+* **`menu.php`**
+    * **Purpose:** The main catalog of food items.
+    * **Functionality:**
+        * Fetches **all** records from the `foods` table.
+        * Displays items in a responsive grid layout using Bootstrap cards.
+        * Truncates descriptions to the first 90 characters to keep the design clean.
+        * Includes an "Order Now" button passing the specific `food_id` to the next page.
+
+* **`order.php`**
+    * **Purpose:** The detailed order placement page.
+    * **Functionality:**
+        * Receives the `food_id` from the URL to display specific details (Image, Title, Price).
+        * Allows the user to input a **quantity** (minimum 1).
+        * Calculates the `total_price` (Price × Quantity) and inserts the order into the database with a status of **'pending'**.
+
+### 🧾 Order Management
+
+* **`orders.php` (My Orders)**
+    * **Purpose:** Displays the personal order history of the currently logged-in user.
+    * **Functionality:**
+        * Uses a `JOIN` query to combine `orders` and `foods` tables, showing the Food Name instead of just an ID.
+        * Filters results specifically for the current user: `WHERE orders.user_id = ?`.
+        * Provides a "Delete" button for each order.
+
+* **`delete_order.php`**
+    * **Purpose:** Handles the cancellation of orders.
+    * **Functionality:**
+        * Accepts an order `id` via the URL.
+        * Executes a SQL `DELETE` command to remove the order from the database.
+        * Redirects the user back to `orders.php` after deletion.
+
+### 🎨 Styling & Layout
+
+* **`header.php`**
+    * **Purpose:** The main navigation bar included on every page.
+    * **Functionality:**
+        * Dynamically changes links based on login status (e.g., shows "Logout" if logged in, "Login" if not).
+        * Uses the custom brand color `#BE6741` for the navbar background.
+
+* **`style.css`**
+    * **Purpose:** Custom CSS overrides.
+    * **Functionality:**
+        * Defines the primary theme color (`#BE6741`) for buttons and backgrounds to ensure consistent branding.
+        * Styles the hero section typography and button hover effects.
+## 🛠️ Admin Panel (Admin Directory)
+
+* **`index.php` (Admin Dashboard)**
+    The main landing page for administrators. It displays summary statistics, such as the total number of users and total orders placed.
+
+* **`items_index.php`**
+    Lists all food items currently in the menu. It provides an interface for admins to add, update, or delete food items.
+
+* **`orders.php` (Admin View)**
+    Displays a table of all customer orders. It allows the admin to view order details (user, food, total) and update the status (e.g., from "Pending" to "Ready for Pick Up").
+
+* **`create.php`**
+    A form that allows admins to add new food items to the database, including uploading an image for the item.
+
+* **`update.php`**
+    A form that allows admins to edit existing food items. It pre-fills the current data and handles image replacement if a new file is uploaded.
+
+* **`delete.php`**
+    A backend script that receives an item ID and deletes that food item from the database.
+
+* **`admin_header.php`**
+    The navigation bar specific to the admin panel, providing links to the Dashboard, Menu Management, and Order Management.
 <h1>📌 Requirements & Proofs</h1>
 
 <p>
