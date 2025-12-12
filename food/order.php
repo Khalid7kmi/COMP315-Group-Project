@@ -5,7 +5,8 @@ include "header.php";
 
 
 if (!isset($_SESSION['username'])) {
-    die("<h3 style='text-align:center; margin-top:40px;'>You must be logged in to place an order.</h3>");
+    header("Location: login.php");
+    exit;
 }
 
 
