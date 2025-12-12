@@ -239,7 +239,7 @@ if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 <hr>
 
 <h2>✅ 8.Code Reusability (Using
-include or require)/h2>
+include or require)</h2>
 <p><strong>Requirement:</strong> Use include/require for header, and database config.</p>
 
 <p><strong>File:</strong> menu.php</p>
