@@ -242,7 +242,7 @@ if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
 include or require)</h2>
 <p><strong>Requirement:</strong> Use include/require for header, and database config.</p>
 
-<p><strong>File:</strong> menu.php</p>
+<p><strong>File:</strong> menu.php + almost all files</p>
 <pre><code class="language-php">
 include "config.php"; 
 include "header.php";   
