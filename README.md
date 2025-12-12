@@ -31,7 +31,7 @@
 </table>
 
 # Entity Relationship(ER) digram for the database
-> ## 🔴 *NOTE:*  The predefined values of the **status** attribute have been updated to for $convenience$ 😶:
+> ## 🔴 *NOTE:*  For $convenience$ 😶The predefined values of the **status** attribute have been updated to :
 - **'Pending'**
 - **'Pick up'** 
 
