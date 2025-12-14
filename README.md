@@ -5,7 +5,7 @@
 ## table of cnotent
 
 <details>
-<summary><strong>📑 Table of Contents (click to expand)</strong></summary>
+<summary><strong>📑 Table of Contents</strong></summary>
 
 <!-- START doctoc -->
 - [Entity Relationship (ER) Diagram for the Database](#entity-relationshiper-digram-for-the-database)
@@ -36,6 +36,7 @@
 
 <h1>A simple food Service System</h1>
 <h2> Introduction </h2>
+A functional🛠️ and simple food ordering systme 
 <h2>Students</h2>
 <table border="1">
   <tr>
@@ -72,6 +73,38 @@
 
 
 <img src="ER.png" alt=" " width="1000" height="500">
+<h2>Close Up Look🧐</h2>
+
+<h3>Users – Orders Relationship</h3>
+
+<p><strong>Meaning:</strong><br>
+Each <strong>User</strong> can place multiple <strong>Orders</strong>; however, each <strong>Order</strong> is placed by only one <strong>User</strong>.
+</p>
+
+<p><strong>Additionally:</strong><br>
+This cardinality <strong>(One-to-Many)</strong> ensures that a single user can have many order records, while every order must be associated with one specific user through the <code>user_id</code> foreign key.
+</p>
+
+<p>This is a <strong>binary relationship</strong>.</p>
+
+<img src="user-orders-relationship.png" width="1000" height="500">
+
+<hr>
+
+<h3>Foods – Orders Relationship</h3>
+
+<p><strong>Meaning:</strong><br>
+Each <strong>Food item</strong> can appear in multiple <strong>Orders</strong>; however, each <strong>Order</strong> refers to only one <strong>Food item</strong>.
+</p>
+
+<p><strong>Additionally:</strong><br>
+This cardinality <strong>(One-to-Many)</strong> ensures that the same food item can be ordered multiple times, while every order entry must be linked to one specific food through the <code>food_id</code> foreign key.
+</p>
+
+<p>This is a <strong>binary relationship</strong>.</p>
+
+<img src="Foods-Orders-relationship.png" width="1000" height="500">
+
 
 # Food Ordering System - Files
 
@@ -97,7 +130,7 @@ This section details the files responsible for the front-end customer experience
 * **`login.php`**
     * **FOR:** Authenticates existing users.
     * **Functionality:**
-        * Contains a hardcoded check for the admin account (User: `admin`, Pass: `*****`) to redirect to the admin panel.
+        * Contains a hardcoded check for the admin account (User: `admin`, Password: `*****`) to redirect to the admin panel.
         * Starts a session (`$_SESSION["loggedin"]`) to track the user across pages.
 
 * **`logout.php`**
@@ -133,7 +166,6 @@ This section details the files responsible for the front-end customer experience
     * **FOR:** Displays the personal order history of the currently logged-in user.
     * **Functionality:**
         * Uses a `JOIN` query to combine `orders` and `foods` tables, showing the Food Name instead of just an ID.
-        * Filters results specifically for the current user: `WHERE orders.user_id = ?`.
         * Provides a "Delete" button for each order.
 
 * **`delete_order.php`**
@@ -228,12 +260,7 @@ Sessions or Cookies)</h2>
 
 <hr>
 
-<h2>✅ 5.Form Handling (At Least
-One Form)</h2>
-<p><strong>Requirement:</strong> Process user input (order form, register form, etc).</p>
-<p><strong>File:</strong> order.php</p>
-##empty for now
-<hr>
+
 
 <h2>✅ 6. Bootstrap & UI/UX Design</h2>
 <p><strong>Requirement:</strong> Use Bootstrap for a responsive and clean UI.</p>
@@ -259,7 +286,7 @@ $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["image"]["name"]);
 
 if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-    $image = $target_file; // Variable stored in database
+    $image = $target_file; 
 } else {
     $errorMessage = "Failed to upload image.";
 }
