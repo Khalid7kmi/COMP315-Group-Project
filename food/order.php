@@ -16,7 +16,6 @@ if (!isset($_GET['food_id'])) {
 
 $food_id = intval($_GET['food_id']);
 
-// Fetch selected food
 $food_sql = "SELECT * FROM foods WHERE id = $food_id";
 $food_result = mysqli_query($conn, $food_sql);
 $food = mysqli_fetch_assoc($food_result);
